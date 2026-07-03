@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { toolPages, guidePages, moneyPage } from "@/lib/pages";
+import { toolPages, moneyPage } from "@/lib/pages";
 import { site } from "@/lib/site";
 
 const primaryTools = toolPages().slice(0, 5);
-const primaryGuides = guidePages();
 const money = moneyPage();
 
 export default function Navbar() {
@@ -23,7 +22,9 @@ export default function Navbar() {
         {/* Desktop nav */}
         <div className="hidden items-center gap-6 md:flex">
           <NavGroup label="Tools" items={primaryTools} />
-          <NavGroup label="Guides" items={primaryGuides} />
+          <Link href="/blog" className="text-sm font-medium text-ink-700 hover:text-mint-600">
+            Blog
+          </Link>
           <Link
             href={money.href}
             className="rounded-lg bg-mint-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-mint-600"
@@ -47,7 +48,13 @@ export default function Navbar() {
       {open && (
         <div className="border-t border-slate-100 bg-white px-4 py-4 md:hidden">
           <MobileSection title="Tools" items={primaryTools} onClick={() => setOpen(false)} />
-          <MobileSection title="Guides" items={primaryGuides} onClick={() => setOpen(false)} />
+          <Link
+            href="/blog"
+            onClick={() => setOpen(false)}
+            className="block py-2 text-sm font-medium text-ink-700"
+          >
+            Blog
+          </Link>
           <Link
             href={money.href}
             onClick={() => setOpen(false)}
