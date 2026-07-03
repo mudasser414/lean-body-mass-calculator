@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { Prose } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 
@@ -61,10 +62,10 @@ export default function ContactPage() {
         <p>
           We respect your privacy. Any information you provide through this form will be kept confidential and used
           only to respond to your inquiry. Please review our{" "}
-          <a href="/legal/privacy" className="font-medium text-mint-700 hover:text-mint-800">
+          <Link href="/legal/privacy" className="font-medium text-mint-700 hover:text-mint-800">
             privacy policy
-          </a>
-          for more details.
+          </Link>
+          {" "}for more details.
         </p>
 
         <h2>Medical Questions</h2>

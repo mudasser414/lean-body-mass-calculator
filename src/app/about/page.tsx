@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { Prose } from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -66,8 +67,11 @@ export default function AboutPage() {
 
         <h2>Contact Us</h2>
         <p>
-          Have questions or feedback? We'd love to hear from you. Check out our{" "}
-          <a href="/contact">contact page</a> to get in touch.
+          Have questions or feedback? We&apos;d love to hear from you. Check out our{" "}
+          <Link href="/contact" className="font-medium text-mint-700 hover:text-mint-800">
+            contact page
+          </Link>
+          {" "}to get in touch.
         </p>
       </Prose>
     </main>
