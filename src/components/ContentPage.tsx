@@ -7,7 +7,6 @@ import { getPage, type Section } from "@/lib/pages";
 const SECTION_LABEL: Record<Section, string> = {
   tools: "Tools",
   guides: "Guides",
-  faq: "FAQ",
   home: "Home",
 };
 

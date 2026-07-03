@@ -3,7 +3,7 @@
 // internal-link graph. Navbar, footer, related-links, sitemap, and breadcrumbs
 // all read from here, so the link structure stays consistent as the site scales.
 
-export type Section = "tools" | "guides" | "faq" | "home";
+export type Section = "tools" | "guides" | "home";
 
 export interface PageNode {
   slug: string; // path segment, e.g. "lean-body-mass-calculator"
@@ -207,23 +207,7 @@ const guides: PageNode[] = [
   }),
 ];
 
-// ── FAQ ──────────────────────────────────────────────────────────────────────
-const faqPages: PageNode[] = [
-  make("faq", "lean-body-mass-calculator-faq", {
-    navLabel: "LBM FAQ",
-    h1: "Lean Body Mass Calculator — FAQ",
-    title: "Lean Body Mass Calculator FAQ — Common Questions",
-    description:
-      "Answers to common lean body mass questions: which formula is most accurate, how LBM differs from BMI, and how often to remeasure.",
-    related: [
-      "lean-body-mass-calculator",
-      "lean-body-mass-formula",
-      "what-is-lean-body-mass",
-    ],
-  }),
-];
-
-export const ALL_PAGES: PageNode[] = [...tools, ...guides, ...faqPages];
+export const ALL_PAGES: PageNode[] = [...tools, ...guides];
 
 const BY_SLUG = new Map(ALL_PAGES.map((p) => [p.slug, p]));
 
@@ -237,5 +221,4 @@ export const getRelated = (slug: string): PageNode[] => {
 
 export const toolPages = () => tools;
 export const guidePages = () => guides;
-export const faqOnlyPages = () => faqPages;
 export const moneyPage = () => tools.find((t) => t.money)!;

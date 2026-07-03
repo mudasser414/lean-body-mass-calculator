@@ -120,13 +120,6 @@ export default function LeanBodyMassCalculatorPage() {
             Lean body mass calculator — FAQ
           </h2>
           <FaqAccordion items={faqs} />
-          <p className="mt-4 text-sm text-ink-500">
-            More questions? See the full{" "}
-            <Link href="/faq/lean-body-mass-calculator-faq" className="font-medium text-mint-700 underline">
-              LBM FAQ
-            </Link>
-            .
-          </p>
         </section>
 
         <RelatedLinks slug={SLUG} />

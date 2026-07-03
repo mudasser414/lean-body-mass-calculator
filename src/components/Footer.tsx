@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { toolPages, guidePages, faqOnlyPages } from "@/lib/pages";
+import { toolPages, guidePages } from "@/lib/pages";
 import { site } from "@/lib/site";
 
-// Footer doubles as a sitewide internal-link hub: every tool, guide, and FAQ
+// Footer doubles as a sitewide internal-link hub: every tool and guide
 // is reachable from every page, which spreads link equity and aids crawling.
 export default function Footer() {
   const tools = toolPages();
   const guides = guidePages();
-  const faq = faqOnlyPages();
 
   return (
     <footer className="mt-20 border-t border-slate-100 bg-slate-50">
@@ -24,7 +23,7 @@ export default function Footer() {
         </div>
 
         <FooterCol title="Calculators" items={tools} />
-        <FooterCol title="Guides" items={[...guides, ...faq]} />
+        <FooterCol title="Guides" items={guides} />
 
         <div>
           <h3 className="text-sm font-semibold text-ink-900">About</h3>

@@ -4,7 +4,6 @@ import { getRelated, type PageNode } from "@/lib/pages";
 const SECTION_TAG: Record<string, string> = {
   tools: "Tool",
   guides: "Guide",
-  faq: "FAQ",
   home: "Home",
 };
 
@@ -25,7 +24,7 @@ export function LinkCard({ page }: { page: PageNode }) {
   );
 }
 
-// Renders the related-pages grid for a given slug. Drives tools ↔ guides ↔ faq
+// Renders the related-pages grid for a given slug. Drives tools ↔ guides
 // cross-linking automatically from the page registry.
 export default function RelatedLinks({ slug, heading = "Related pages" }: { slug: string; heading?: string }) {
   const related = getRelated(slug);
