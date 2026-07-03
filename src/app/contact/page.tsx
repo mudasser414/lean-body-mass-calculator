@@ -5,6 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Contact Us",
   description: "Get in touch with us. We'd love to hear your questions, feedback, and suggestions.",
+  path: "/contact",
 });
 
 export default function ContactPage() {

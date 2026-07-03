@@ -5,6 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Medical Disclaimer",
   description: "Important medical disclaimer regarding the use of our calculator and information.",
+  path: "/legal/disclaimer",
 });
 
 export default function DisclaimerPage() {

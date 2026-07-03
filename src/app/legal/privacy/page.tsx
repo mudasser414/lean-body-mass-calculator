@@ -5,6 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Privacy Policy",
   description: "Our privacy policy explains how we collect, use, and protect your personal data.",
+  path: "/legal/privacy",
 });
 
 export default function PrivacyPage() {

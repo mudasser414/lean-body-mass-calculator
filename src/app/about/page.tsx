@@ -6,6 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = buildMetadata({
   title: "About Us",
   description: "Learn about our mission to provide accurate lean body mass calculators and health information.",
+  path: "/about",
 });
 
 export default function AboutPage() {

@@ -5,6 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Terms of Service",
   description: "Our terms of service outline the rules and regulations for using our website.",
+  path: "/legal/terms",
 });
 
 export default function TermsPage() {
