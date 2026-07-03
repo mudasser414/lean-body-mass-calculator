@@ -26,6 +26,27 @@ export default function Footer() {
         <FooterCol title="Guides" items={guides} />
 
         <div>
+          <h3 className="text-sm font-semibold text-ink-900">Legal</h3>
+          <ul className="mt-3 space-y-2 text-sm text-ink-500">
+            <li>
+              <Link href="/legal/privacy" className="hover:text-mint-600">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="/legal/terms" className="hover:text-mint-600">
+                Terms of Service
+              </Link>
+            </li>
+            <li>
+              <Link href="/legal/disclaimer" className="hover:text-mint-600">
+                Medical Disclaimer
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
           <h3 className="text-sm font-semibold text-ink-900">About</h3>
           <ul className="mt-3 space-y-2 text-sm text-ink-500">
             <li>
