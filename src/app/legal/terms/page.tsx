@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Prose } from "@/components/Prose";
+import Prose from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({

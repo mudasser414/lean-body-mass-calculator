@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Prose } from "@/components/Prose";
+import Prose from "@/components/Prose";
 import { buildMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
