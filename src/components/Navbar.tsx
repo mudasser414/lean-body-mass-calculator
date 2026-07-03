@@ -21,11 +21,20 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden items-center gap-4 md:flex">
           <NavGroup label="Tools" items={primaryTools} />
           <NavGroup label="Guides" items={primaryGuides} />
           <Link href="/blog" className="text-sm font-medium text-ink-700 hover:text-mint-600">
             Blog
+          </Link>
+          <Link href="/about" className="text-sm font-medium text-ink-700 hover:text-mint-600">
+            About
+          </Link>
+          <Link href="/contact" className="text-sm font-medium text-ink-700 hover:text-mint-600">
+            Contact
+          </Link>
+          <Link href="/legal/privacy" className="text-sm font-medium text-ink-700 hover:text-mint-600">
+            Privacy
           </Link>
           <Link
             href={money.href}
@@ -57,6 +66,27 @@ export default function Navbar() {
             className="block py-2 text-sm font-medium text-ink-700"
           >
             Blog
+          </Link>
+          <Link
+            href="/about"
+            onClick={() => setOpen(false)}
+            className="block py-2 text-sm font-medium text-ink-700"
+          >
+            About
+          </Link>
+          <Link
+            href="/contact"
+            onClick={() => setOpen(false)}
+            className="block py-2 text-sm font-medium text-ink-700"
+          >
+            Contact
+          </Link>
+          <Link
+            href="/legal/privacy"
+            onClick={() => setOpen(false)}
+            className="block py-2 text-sm font-medium text-ink-700"
+          >
+            Privacy
           </Link>
           <Link
             href={money.href}
