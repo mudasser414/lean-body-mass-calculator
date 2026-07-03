@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-white text-ink-700 antialiased;
+}
+
+/* Long-form article link styling */
+.prose-lbm a {
+  @apply font-medium text-mint-700 underline decoration-mint-500/40 underline-offset-2 hover:decoration-mint-500;
+}
+
+.prose-lbm ul {
+  @apply list-disc space-y-1.5 pl-5;
+}
+
+.prose-lbm ol {
+  @apply list-decimal space-y-1.5 pl-5;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
